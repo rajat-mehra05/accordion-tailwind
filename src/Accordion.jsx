@@ -6,14 +6,14 @@ const Accordion = ({heading, desc}) => {
     return (
        <>
           <div className="flex flex-col items-center justify-center mt-8">
-           <div onClick={() => setIsActive(!isActive)} className="flex justify-between max-w-sm bg-slate-500 p-4 w-96 cursor-pointer font-semibold text-xl">
+           <div onClick={() => setIsActive(!isActive)} className="flex justify-between max-w-sm bg-slate-500 p-4 w-80 sm:w-96 cursor-pointer font-semibold text-xl">
                {heading}
                <span className="font-semibold text-2xl"> {isActive ? "-" : "+"} </span>
            </div>
 
             {
                 isActive ? (
-                    <div className="p-4 bg-zinc-400 w-96 font-semibold text-xl">
+                    <div className="p-4 bg-zinc-400 w-80 sm:w-96 font-semibold text-xl">
                         {desc}
                     </div>
                 ) : ""
